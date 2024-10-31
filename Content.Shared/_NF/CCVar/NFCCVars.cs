@@ -222,4 +222,13 @@ public sealed class NFCCVars
     /// </summary>
     public static readonly CVarDef<float> CrateGenerationGridBoundsScale =
         CVarDef.Create("nf14.events.crate_generation_grid_bounds_scale", 0.6f, CVar.SERVERONLY);
+
+    /*
+     * Settings
+     */
+    /// <summary>
+    ///     The volume of expedition end music
+    /// </summary>
+    public static readonly CVarDef<float> SalvageExpeditionVolume =
+        CVarDef.Create("audio.expeditionvolume", -5f, CVar.CLIENTONLY | CVar.ARCHIVE);
 }

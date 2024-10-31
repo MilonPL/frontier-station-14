@@ -17,6 +17,8 @@ using Robust.Shared.Map.Components;
 using Robust.Shared.Player;
 using Robust.Shared.Utility;
 using Content.Shared.Coordinates;
+using Content.Shared.Salvage;
+using Robust.Shared.Audio;
 
 namespace Content.Server.Salvage;
 
@@ -180,7 +182,11 @@ public sealed partial class SalvageSystem
             }
             else if (comp.Stage < ExpeditionStage.MusicCountdown && comp.Stream == null && remaining < audioLength) // Frontier
             {
-                var audio = _audio.PlayPvs(comp.Sound, uid);
+                var audioParams = AudioParams.Default;
+                var ev = new PlaySalvageAudioEvent(audioParams);
+                RaiseLocalEvent(uid, ev);
+
+                var audio = _audio.PlayPvs(comp.Sound, uid, ev.AudioParams);
                 comp.Stream = audio?.Entity;
                 _audio.SetMapAudio(audio);
                 comp.Stage = ExpeditionStage.MusicCountdown;

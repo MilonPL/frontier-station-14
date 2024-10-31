@@ -43,14 +43,15 @@ public sealed partial class SalvageExpeditionComponent : SharedSalvageExpedition
     [DataField, AutoNetworkedField]
     public EntityUid? Stream = null;
 
+    // Frontier: Moved to shared
     /// <summary>
     /// Sound that plays when the mission end is imminent.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite), DataField]
-    public SoundSpecifier Sound = new SoundCollectionSpecifier("ExpeditionEnd")
-    {
-        Params = AudioParams.Default.WithVolume(-5),
-    };
+    // [ViewVariables(VVAccess.ReadWrite), DataField]
+    // public SoundSpecifier Sound = new SoundCollectionSpecifier("ExpeditionEnd")
+    // {
+    //     Params = AudioParams.Default.WithVolume(-5),
+    // };
 
     /// <summary>
     /// Song selected on MapInit so we can predict the audio countdown properly.

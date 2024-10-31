@@ -6,7 +6,7 @@ using Robust.Shared.GameStates;
 
 namespace Content.Client.Salvage;
 
-public sealed class SalvageSystem : SharedSalvageSystem
+public sealed partial class SalvageSystem : SharedSalvageSystem // Frontier: Changed to partial, see SalvageSystem.Audio.cs
 {
     [Dependency] private readonly IPlayerManager _playerManager = default!;
     [Dependency] private readonly ContentAudioSystem _audio = default!;
@@ -14,6 +14,7 @@ public sealed class SalvageSystem : SharedSalvageSystem
     public override void Initialize()
     {
         base.Initialize();
+        InitializeAudio(); // Frontier
         SubscribeLocalEvent<PlayAmbientMusicEvent>(OnPlayAmbientMusic);
         SubscribeLocalEvent<SalvageExpeditionComponent, ComponentHandleState>(OnExpeditionHandleState);
     }
