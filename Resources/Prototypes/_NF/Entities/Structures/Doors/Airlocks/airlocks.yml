@@ -54,6 +54,15 @@
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsSecurity ]
+
+- type: entity
+  parent: AirlockMedicalGlassLockedSecurity
+  id: AirlockBrigmedicGlassLocked
+  suffix: Locked, Brigmedic
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsBrigmedic ]
 # endregion
 
 # region External
@@ -72,5 +81,5 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: Docking
-    name: McDrive Thru
+    name: dock-label-drive-thru
 # endregion

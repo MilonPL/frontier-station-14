@@ -17,9 +17,7 @@ entities:
   - uid: 8756
     components:
     - type: MetaData
-      name: Public Transport Shuttle
     - type: Transform
-      parent: invalid
     - type: MapGrid
       chunks:
         -1,-1:
@@ -50,6 +48,7 @@ entities:
     - type: OccluderTree
     - type: Shuttle
     - type: GridPathfinding
+    - type: PreventGridAnchorChanges
     - type: Gravity
       gravityShakeSound: !type:SoundPathSpecifier
         path: /Audio/Effects/alert.ogg
@@ -963,6 +962,4 @@ entities:
     - type: Transform
       pos: -0.5,-1.5
       parent: 8756
-    - type: WarpPoint
-      location: Public Transport Shuttle
 ...

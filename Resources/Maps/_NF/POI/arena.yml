@@ -26,10 +26,7 @@ entities:
   - uid: 2
     components:
     - type: MetaData
-      name: Arena
     - type: Transform
-      pos: 0.10035038,0.17291927
-      parent: invalid
     - type: MapGrid
       chunks:
         0,0:
@@ -126,18 +123,11 @@ entities:
           version: 6
     - type: Broadphase
     - type: Physics
-      bodyStatus: InAir
-      angularDamping: 999999
-      linearDamping: 999999
-      fixedRotation: False
-      bodyType: Dynamic
     - type: Fixtures
       fixtures: {}
     - type: OccluderTree
     - type: SpreaderGrid
     - type: Shuttle
-      angularDamping: 999999
-      linearDamping: 999999
     - type: GridPathfinding
     - type: BecomesStation
       id: Arena
@@ -20842,7 +20832,7 @@ entities:
           showEnts: False
           occludes: True
           ent: null
-- proto: WarpPointNFArena
+- proto: WarpPoint
   entities:
   - uid: 2346
     components:

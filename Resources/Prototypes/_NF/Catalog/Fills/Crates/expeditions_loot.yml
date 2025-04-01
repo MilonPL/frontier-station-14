@@ -157,7 +157,6 @@
     - id: KitchenElectricGrillFlatpack
     - id: KitchenReagentGrinderFlatpack
     - id: VendingMachineBoozeFlatpack
-    - id: VendingMachineChefvendFlatpack
     - id: VendingMachineDinnerwareFlatpack
     - id: ServiceTechFabFlatpack
     - id: VendingMachineRestockChefvend
@@ -376,7 +375,7 @@
   - type: StorageFill
     contents:
     - id: DoubleEmergencyAirTankFilled
-    - id: ClothingShoesBootsMagCombat
+    - id: ClothingShoesBootsMagSecurity
     - id: ClothingOuterHardsuitPrivateSecurity
     - id: ClothingMaskGasSecurity
     - id: JetpackMiniFilled
